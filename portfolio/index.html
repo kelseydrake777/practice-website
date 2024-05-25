@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Kelsey Drake 
+    Final Project - Personal Portfolio
+-->
+<!--
+    Project Photo Credits:
+    unsplash.com
+    Kelly Sikkema
+    Fotis Fotopoulos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Montserrat Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Animations-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!--Link to CodePen that helped me with mobile nav:
+    https://codepen.io/shieldsma91/pen/zLpbLX?editors=1100-->
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--MOBILE NAV-->
+            <ul id="menu">
+                <!--<a class="logo" href="#LOGO">DD</a>-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="resume.html">Resume</a>
+                </li>
+                <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="socialIcons">
+
+        <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+    <a id="homeLogo" href="index.html">DD</a>
+
+    <ul id="desktopMenu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Resume Link: https://indiana-my.sharepoint.com/:b:/g/personal/drakke_iu_edu/ER3flJLpB5dOo4kywgNUhogB-PenXRwI6o4hKTZ7-mSo-w?e=bOpVfN-->
+        <li><a href="resume.html">Resume</a>
+        </li>
+    </ul>
+    <h1 id="homeName" class="animate__animated animate__fadeInDown">Hey, I'm Kelsey.</h1>
+    <p id="homeTitle" class="animate__animated animate__fadeInLeft"><span id="homeDesigner">UX DESIGNER &nbsp </span> |
+        DRAKE DESIGN</p>
+    <img id="homeKelsey" src="./images/mainPhoto.png" alt="Picture of Kelsey" width="250px" height="300px">
+
+    <p class="pHome">I am a UX Designer with goals to continually learn more about people, how to design for people, and
+        how to create beautiful and accessible user experiences. </p>
+    <button onclick="location.href='contact.html'" id="buttonHome">Contact Me</button>
+    <button
+        onclick="location.href='https://indiana-my.sharepoint.com/:b:/g/personal/drakke_iu_edu/ER3flJLpB5dOo4kywgNUhogB-PenXRwI6o4hKTZ7-mSo-w?e=bOpVfN'"
+        id="buttonHomeResume">Download CV</button>
+</body>
+
+</html>

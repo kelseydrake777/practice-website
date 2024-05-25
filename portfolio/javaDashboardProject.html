@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Kelsey Drake 
+    Final Project - Personal Portfolio
+-->
+<!--
+    Project Photo Credits:
+    unsplash.com
+    Kelly Sikkema
+    Fotis Fotopoulos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Project</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Montserrat Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Animations-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!--Link to CodePen that helped me with mobile nav:
+    https://codepen.io/shieldsma91/pen/zLpbLX?editors=1100-->
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--MOBILE NAV-->
+            <ul id="menu">
+                <!--<a class="logo" href="#LOGO">DD</a>-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="resume.html">Resume</a>
+                </li>
+                <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="socialIcons">
+
+        <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+    <a id="homeLogo" href="index.html">DD</a>
+
+    <ul id="desktopMenu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Resume Link: https://indiana-my.sharepoint.com/:b:/g/personal/drakke_iu_edu/ER3flJLpB5dOo4kywgNUhogB-PenXRwI6o4hKTZ7-mSo-w?e=bOpVfN-->
+        <li><a href="resume.html">Resume</a>
+        </li>
+
+
+    </ul>
+    <img id="javaCoverPicture" src="./images/javaProject.jpg" alt="cover picture">
+    <h1 id="javaProjectH1">Java Dashboard Project</h1>
+    <section class="javaProjectInfo">
+        <h2>Background</h2>
+        <p>In my Application Development class, we created a dashboard application using Java that would keep track of
+            product inventory, customers' information, order information, and allow employees to make changes to that
+            information as needed. We worked as a group of 3 to create the application and then proceeded to switch
+            projects with another group to fix anything that was not previously functioning correctly, update some
+            design elements, and create new JUnit tests.</p>
+        <h2> Homepage</h2>
+
+        <p> On the homepage of the dashboard, we found it very important that the user is able to find all the
+            information they may need on one page. If they need to find information about a customer, they can search
+            the name or the order ID using the Quick Search option. Based on that search result, they will see the
+            orders that are associated with the name or order ID, along with any filled or unfilled orders that they
+            have.</p>
+        <figure>
+            <img src="./images/dashboardHome.JPG" alt="Java Application Dashboard" width="250px">
+            <figcaption>Dashboard Home</figcaption>
+        </figure>
+        <h2>Customer Page</h2>
+
+
+        <p>On the Customer Page, the user can search for a specific name and can find their information, as well as edit
+            and save that information within that same tab. There is also the option to create a new customer, which
+            leads the user to a tab where they can fill out the new customer's information and save their information.
+        </p>
+        <figure>
+            <img src="./images/customerHome.JPG" alt="Java Application Customer Dashboard" width="250px">
+            <figcaption>Dashboard Customer</figcaption>
+        </figure>
+        <h2>Order Page</h2>
+
+        <p>On the order page, there is an option to search for specific orders to find information about those orders,
+            such as the order ID, the customer ID associated with that ID, the date ordered, date filled, as well as
+            information about each order. On this page, the user can also place an order and get the order filled as
+            well.</p>
+        <figure>
+            <img src="./images/orderHome.JPG" alt="Java Application Order Dashboard" width="250px">
+            <figcaption>Dashboard Order</figcaption>
+        </figure>
+
+        <p>If the user clicks on "create new order", then they are led to a page where they can create an order for a
+            previously existing customer, or they have the option to create a new customer and put their information
+            into the system.</p>
+        <figure>
+            <img src="./images/createNewOrder.JPG" alt="Java Application Create New Order Dashboard" width="250px">
+            <figcaption>Dashboard Create New Order</figcaption>
+        </figure>
+        <h2>What We Learned</h2>
+        <p>Throughout the semester, we used Eclipse, an integrated development environment (IDE) to write our Java
+            code,
+            create graphical user interfaces (GUI's), and to conduct JUnit testing. We also learned how to
+            collaborate
+            as a team using GitHub to create repositories and create and commit to branches. </p>
+        <h2>Challenges We Faced</h2>
+        <p>There were a lot of challenges we faced during the design and development processes. During the design
+            process, we realized very quickly that having an interface that was easy to navigate and understand would
+            allow the user have a better experience. Once we realized how important logic flow is for usability, we
+            could make necessary change to the dashboard.</p>
+        <p>During the development process, we struggled with making sure that all orders were associated with a customer
+            and making sure that customers showed up on the customer dashboard even when they haven't placed an order
+            yet. Learning GitHub was also a learning curve for us.</p>
+        <h3><a href="projects.html">View Other Projects</a></h3>
+
+    </section>
+    <div class=" space">
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Made by Kelsey Drake<br>
+                <br>
+                drakke@iu.edu
+            </p>
+
+        </footer>
+    </div>
+</body>
+
+</html>

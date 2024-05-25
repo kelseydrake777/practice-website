@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Kelsey Drake 
+    Final Project - Personal Portfolio
+-->
+<!--
+    Project Photo Credits:
+    unsplash.com
+    Kelly Sikkema
+    Fotis Fotopoulos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Montserrat Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Animations-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!--Link to CodePen that helped me with mobile nav:
+    https://codepen.io/shieldsma91/pen/zLpbLX?editors=1100-->
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--MOBILE NAV-->
+            <ul id="menu">
+                <!--<a class="logo" href="#LOGO">DD</a>-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="resume.html">Resume</a>
+                </li>
+                <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="socialIcons">
+
+        <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+    <a id="homeLogo" href="index.html">DD</a>
+
+    <ul id="desktopMenu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Resume Link: https://indiana-my.sharepoint.com/:b:/g/personal/drakke_iu_edu/ER3flJLpB5dOo4kywgNUhogB-PenXRwI6o4hKTZ7-mSo-w?e=bOpVfN-->
+        <li><a href="resume.html">Resume</a>
+        </li>
+    </ul>
+    <p id="pWelcome">WELCOME!</p>
+    <h1 id="aboutName">I'm Kelsey Drake.</h1>
+    <p class="pAbout">As an aspiring UX Designer, I plan to spend each day learning more about how I can create products
+        that will exceed users’ expectations and create a positive experience for anyone who chooses to use that
+        product. I want to create experiences that benefit users and stakeholders alike, with priority on accessible
+        design. </p>
+    <p class="pAbout">In my personal life, a lot of my plans revolve around my main goal of travelling the world. I want
+        to meet and learn from people who come from all walks of life. I’d love to try new foods and listen to new music
+        during my travels as well as learn how to do new things. For example, how cool would it be to dance on roller
+        skates? One day, I’m going to do it. (In as many places as possible, of course).</p>
+    <img id="aboutKelsey" src="./images/kelseyOutside.jpg" alt="Picture of Kelsey Outside" width="250px" height="350px">
+
+    <div class="heroAbout">
+        <h2 id="h2About">Want to Connect?</h2>
+        <button onclick="location.href='contact.html'" id="buttonAbout">Get in Touch</button>
+    </div>
+    <div class="viewAll">
+        <h2 id="projectsAbout">Projects</h2>
+        <button onclick="location.href='projects.html'" id="projectsButton"> View All</button>
+    </div>
+    <div class="allCards">
+        <div class="card">
+            <img src="./images/mobileProject.jpg" alt="Mobile Project Design Photo Placeholder" style="width: full">
+            <div class="cardContainer">
+                <h4>Mobile Mental Health Application Design</h4>
+                <p>Formulated a solution for IU students regarding access to mental health resources. We
+                    created a digital prototype application called “Let’s Talk” through thorough primary and secondary
+                    research methods.
+                </p>
+                <a href="mentalHealthProject.html" class="links" ">Read More </a>
+
+        </div>
+    </div>
+    <div class=" card">
+                    <img src="./images/javaProject.jpg" alt="Java Project Design Photo Placeholder" style="width: full">
+                    <div class="cardContainer">
+                        <h4>Java Dashboard Design Application</h4>
+                        <p> Designed a dashboard application using Java that keeps track of
+                            products inventory, customer information, order information, and allows employees to make
+                            changes to that information as needed.
+                        </p>
+                        <a href="javaDashboardProject.html" class="links" ">Read More </a>
+
+        </div>
+    </div>
+    <div class=" card">
+                            <img src="./images/redesignProject.jpg" alt="Redesign Project Design Photo Placeholder"
+                                style="width: full">
+                            <div class="cardContainer">
+                                <h4>Bloomington Food Policy Redesign</h4>
+                                <p> Oversaw a group of 4 in the redesign of a local nonprofit website.
+                                    I led the team in learning WordPress, sitemapping,
+                                    wireframing, and many other methods in the creation of our final website redesign.
+                                </p>
+                                <a href="redesignProject.html" class="links" ">Read More </a>
+        </div>
+    </div>
+</div>
+<div class=" space">
+                            </div>
+                            <div class="footer">
+                                <footer>
+                                    <p>Made by Kelsey Drake<br>
+                                        <br>
+                                        drakke@iu.edu
+                                    </p>
+
+                                </footer>
+                            </div>
+</body>
+
+
+</html>

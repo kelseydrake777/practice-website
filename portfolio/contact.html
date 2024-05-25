@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Kelsey Drake 
+    Final Project - Personal Portfolio
+-->
+<!--
+    Project Photo Credits:
+    unsplash.com
+    Kelly Sikkema
+    Fotis Fotopoulos
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Montserrat Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <!--Link to Animations-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!--Link to CodePen that helped me with mobile nav:
+    https://codepen.io/shieldsma91/pen/zLpbLX?editors=1100-->
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--MOBILE NAV-->
+            <ul id="menu">
+                <!--<a class="logo" href="#LOGO">DD</a>-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="resume.html">Resume</a>
+                </li>
+                <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+            </ul>
+
+        </div>
+
+    </nav>
+    <div class="socialIcons">
+
+        <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+    </div>
+    <a id="homeLogo" href="index.html">DD</a>
+
+    <ul id="desktopMenu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- Resume Link: https://indiana-my.sharepoint.com/:b:/g/personal/drakke_iu_edu/ER3flJLpB5dOo4kywgNUhogB-PenXRwI6o4hKTZ7-mSo-w?e=bOpVfN-->
+        <li><a href="resume.html">Resume</a>
+        </li>
+    </ul>
+
+    <body>
+        <div class="contactPage">
+            <div class="textContact">
+                <h1 class="h1Contact">Let's Chat!</h1>
+                <p class="pContact">
+                    For all inquiries, please contact me using one of the following, or the form. <br>
+                <p class="pContact"><strong>Email:</strong> drakke@iu.edu</p>
+
+                </p>
+                <div class="textContactIcons">
+                    <a href="https://www.linkedin.com/in/kelseydrake/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/kelsey.drakee/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.facebook.com/kelsey.drake.50/"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+            <!--Help with the form from: https://www.sanwebe.com/2014/08/css-html-forms-designs-->
+            <div class="formContact">
+                <form action="" method="post">
+                    <h2 id="contactH2">Contact Me:</h2>
+                    <label for="field1">
+                        <span class="fields">Enter your name:</span><input type="text" name="field1" required="true" />
+                    </label>
+                    <label for="field2">
+                        <span class="fields">Enter your email:</span><input type="email" name="field2"
+                            required="true" />
+                    </label>
+                    <label for="field3">
+                        <span class="fields">Enter Message</span><textarea name="field3" onkeyup="adjust_textarea(this)"
+                            required="true"></textarea>
+                    </label>
+                    <label>
+                        <span></span><input type="submit" value="Submit" />
+                    </label>
+                </form>
+            </div>
+
+
+
+
+            <script type="text/javascript">
+                //auto expand textarea
+                function adjust_textarea(h) {
+                    h.style.height = "20px";
+                    h.style.height = (h.scrollHeight) + "px";
+                }
+            </script>
+
+        </div>
+        <div class=" space">
+        </div>
+        <div class="footer">
+            <footer>
+                <p>Made by Kelsey Drake<br>
+                    <br>
+                    drakke@iu.edu
+                </p>
+
+            </footer>
+        </div>
+    </body>
+
+
+</html>

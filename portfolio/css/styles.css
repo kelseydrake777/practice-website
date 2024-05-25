@@ -1,0 +1,1181 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EAE8DC;
+}
+
+
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+/*Link to CodePen that helped me with mobile nav:
+ https: //codepen.io/shieldsma91/pen/zLpbLX?editors=1100*/
+
+/* MOBILE NAVIGATION */
+a {
+  text-decoration: none;
+  color: #E85A50;
+}
+
+.socialIcons {
+  color: #E85A50;
+}
+
+a:hover {
+  color: #8E8D8A;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+
+
+}
+
+#menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 180px;
+  height: 800px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #EAE8DC;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 20px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+#desktopMenu {
+  display: none;
+}
+
+.socialIcons {
+  display: none;
+}
+
+/*MOBILE MAIN BODY STYLES*/
+#homeName {
+  display: flex;
+  color: #E85A50;
+  justify-content: center;
+  margin-top: 5.0rem;
+
+}
+
+
+
+#homeTitle {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+}
+
+#homeKelsey {
+  display: flex;
+  margin: 0 auto;
+  width: 250px;
+}
+
+#homeDesigner {
+  color: #E85A50;
+}
+
+.pHome {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin: 2.0rem 3.0rem;
+}
+
+#buttonHome {
+  display: flex;
+  margin: auto;
+  margin-top: 3.0rem;
+  padding: 0.5rem 1.5rem;
+  border: 0.5px solid black;
+  background-color: #E85A50;
+  color: whitesmoke;
+  transition: 0.5s;
+  font-size: 20px;
+  border-radius: 180px;
+
+}
+
+#buttonHomeResume {
+  display: none;
+}
+
+#buttonHomeResume:hover {
+
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#buttonHome:hover {
+
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#homeLogo {
+  display: none;
+
+}
+
+#pWelcome {
+  display: flex;
+  margin-left: 2.0rem;
+  margin-top: 5.0rem;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+#aboutName {
+  display: flex;
+  color: #E85A50;
+  margin-left: 2.0rem;
+  margin-top: 0.5rem;
+}
+
+.pAbout {
+  margin-left: 2.0rem;
+  margin-right: 2.0rem;
+}
+
+#aboutKelsey {
+  display: flex;
+  margin: auto;
+  border: 1px solid #85888C;
+  margin-top: 2.0rem;
+  margin-bottom: 3.0rem;
+}
+
+.heroAbout {
+  background-color: #E9D8BF;
+  padding-top: 2.0rem;
+  padding-bottom: 3.0rem;
+  margin-bottom: 3.0rem;
+}
+
+#h2About {
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #E9D8BF;
+  color: #E85A50;
+}
+
+#buttonAbout {
+  display: flex;
+  margin: auto;
+  padding: 0.5rem 1.5rem;
+  border: 0.5px solid black;
+  background-color: #E85A50;
+  color: whitesmoke;
+  transition: 0.5s;
+  font-size: 20px;
+  margin-top: 2.0rem;
+  border-radius: 180px;
+}
+
+#buttonAbout:hover {
+
+  transition: 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.h1Contact {
+  display: flex;
+  color: #E85A50;
+  margin-left: 10%;
+  margin-top: 5.0rem;
+
+}
+
+.pContact {
+  margin-left: 10%;
+
+}
+
+/*Help with the form from: https://www.sanwebe.com/2014/08/css-html-forms-designs*/
+form {
+  width: 330px;
+  height: 400px;
+  font-size: 16px;
+  background-color: #E9D8BF;
+  padding: 30px 30px 15px 30px;
+  margin-left: 10%;
+  margin-top: 2.0rem;
+  margin-bottom: 2.0rem;
+  margin-right: 4.0rem;
+
+}
+
+.contactPage {
+  margin-right: 4.0rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 30px;
+  background-color: #E9D8BF;
+}
+
+form label>span {
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+
+form input[type=text],
+form input[type=email] {
+  background-color: #E9D8BF;
+  border: none;
+  border-bottom: 1px dashed black;
+  width: 275px;
+  outline: none;
+  padding: 0;
+  font-style: italic;
+}
+
+form textarea {
+  font-style: italic;
+  padding: 0;
+  background-color: #E9D8BF;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed black;
+  width: 275px;
+  overflow: hidden;
+  resize: none;
+  height: 20px;
+}
+
+form input[type=submit],
+form input[type=input] {
+  background-color: #E85A50;
+  color: whitesmoke;
+  border: 1px solid black;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.0rem;
+  transition: 0.5s;
+  border-radius: 180px;
+}
+
+form input[type=submit]:hover,
+form input[type=input]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+.fields {
+  background-color: #E9D8BF;
+
+}
+
+#contactH2 {
+  background-color: #E9D8BF;
+  color: #E85A50;
+  margin-bottom: 2.0rem;
+}
+
+.textContactIcons {
+  display: none;
+}
+
+#projectsAbout {
+  color: #E85A50;
+  margin-left: 10%;
+}
+
+/*Help from W3schools.com for cards: https://www.w3schools.com/howto/howto_css_cards.asp*/
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 70%;
+  margin-top: 2.0rem;
+}
+
+.projectCardsInfo {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 70%;
+  margin-top: 2.0rem;
+}
+
+.space {
+  margin-top: 3.0rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.projectCardsInfo:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardContainer {
+  padding: 2px 20px;
+  margin-bottom: 2.0rem;
+}
+
+.projectCardsInfo img {
+  width: full;
+}
+
+.projectCards {
+  padding: 2px 20px;
+
+  margin-bottom: 2.0rem;
+}
+
+
+.projectAllCards {
+  margin-left: 2.5%;
+
+}
+
+#projectsButton {
+  display: none;
+}
+
+.resumeH1 {
+  color: #E85A50;
+  margin-top: 15%;
+  margin-left: 12%;
+}
+
+.resumeInfo {
+  margin-left: 12%;
+}
+
+.resumeList {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeInfo {
+  width: 70%;
+}
+
+.projectsH1 {
+  color: #E85A50;
+  margin-left: 12%;
+  margin-top: 15%;
+}
+
+.tabs {
+  width: 85%;
+  margin-left: 12%;
+  margin-top: 1.5rem;
+
+}
+
+
+.skills {
+  margin-left: 12%;
+}
+
+
+.skillsList {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillsList2 {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillsList3 {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.w3-border {
+  width: 85%;
+  height: 30%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+#javaProjectH1 {
+  color: #E85A50;
+  margin-left: 12%;
+  margin-top: 15%;
+}
+
+#mobileProjectH1 {
+  color: #E85A50;
+  margin-top: 15%;
+}
+
+.javaProjectInfo {
+  width: 100%;
+  margin-left: 12%;
+  padding-right: 10%;
+}
+
+.javaProjectInfo img {
+  width: 300px;
+  height: 250px;
+
+}
+
+.mobileProjectInfo {
+  width: 100%;
+  margin-left: 12%;
+  padding-right: 10%;
+}
+
+#javaCoverPicture {
+  display: none;
+
+}
+
+#mobileCoverPicture {
+  display: none;
+}
+
+.letsTalkImages {
+  width: 350px;
+  height: 200px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.letsTalkProblem {
+  width: 300px;
+  height: 350px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.letsTalkPersona {
+  width: 350px;
+  height: 200px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.letsTalkDiagram {
+  width: 300px;
+  height: 400px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.redesignSection {
+  margin-left: 12%;
+
+}
+
+.redesignProjectH1 {
+  color: #E85A50;
+  margin-top: 15%;
+}
+
+#redesignCoverPicture {
+  display: none;
+}
+
+.wireframe {
+  width: 300px;
+  height: 600px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.contact {
+  width: 350px;
+  height: 200px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.letsTalkApplication {
+  width: 350px;
+  height: 200px;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+  padding-right: 20%;
+}
+
+.footer p {
+  background-color: #85888C;
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
+  margin-bottom: 0;
+  color: whitesmoke;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #homeName {
+    font-size: 56px;
+  }
+
+  #homeTitle {
+    font-size: 28px;
+  }
+
+  #homeKelsey {
+    width: 300px;
+    height: 400px;
+  }
+
+  #buttonHome {
+    font-size: 20px;
+
+  }
+
+  #buttonHomeResume {
+    font-size: 20px;
+
+  }
+
+  .pHome {
+    font-size: 20px;
+    margin: 2.0rem 2.0rem 0 2.0rem;
+  }
+
+  #homeLogo {
+    display: none;
+
+  }
+
+  .socialIcons {
+    display: none;
+  }
+
+  .fa:hover {
+    color: #E85A50;
+    cursor: pointer;
+  }
+
+  .h1Contact {
+    font-size: 32px;
+
+  }
+
+  .pContact {
+    font-size: 16px;
+  }
+
+  form {
+    width: 650px;
+    font-size: 16px;
+    margin-top: 4.0rem;
+  }
+
+  form label>span {
+
+    width: 350px;
+  }
+
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1300px) {
+  /*DESKTOP NAVIGATION*/
+
+  ul {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #desktopMenu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ul {
+    gap: 2.0rem;
+
+  }
+
+  #homeLogo {
+    display: block;
+    position: absolute;
+    top: 2.0rem;
+    left: 12.0rem;
+    font-weight: 600;
+    color: #E85A50;
+  }
+
+  #homeLogo:hover {
+    color: #85888C;
+
+  }
+
+  .socialIcons {
+    display: flex;
+    position: absolute;
+    top: 2.0rem;
+    right: 8.0rem;
+    gap: 1.0rem;
+    font-size: 24px;
+
+  }
+
+
+  #buttonHomeResume {
+    padding: 0.5rem 1.5rem;
+    border: 0.5px solid #E85A50;
+    background-color: transparent;
+    color: black;
+    border: 0.5px solid black;
+    transition: 0.5s;
+    font-size: 20px;
+    border-radius: 180px;
+    margin-left: 1.0rem;
+  }
+
+  /*DESKTOP MAIN BODY STYLES*/
+  #homeName {
+    display: flex;
+    justify-content: left;
+    font-size: 72px;
+    margin-left: 12%;
+    margin-top: 12%;
+    margin-bottom: 0;
+
+
+  }
+
+  #homeTitle {
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+    margin-left: 12%;
+  }
+
+  #homeKelsey {
+    display: inline;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 12.0rem;
+    height: 560px;
+    width: 445px;
+  }
+
+  .pHome {
+    display: none;
+  }
+
+  #buttonHome {
+    display: inline;
+    font-size: 24px;
+    margin-left: 12%;
+    margin-top: 1.0rem;
+
+  }
+
+  #buttonHomeResume {
+    display: inline;
+    font-size: 24px;
+    margin-top: 1.0rem;
+
+  }
+
+  ul li a {
+    color: #8E8D8A;
+    font-weight: 600;
+  }
+
+  ul li a:hover {
+    color: #E85A50;
+
+  }
+
+
+
+  #desktopMenu {
+    display: flex;
+    justify-content: center;
+    gap: 6.0rem;
+    margin-top: 2.0rem;
+  }
+
+  #aboutKelsey {
+    display: flex;
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin-right: 20.0rem;
+    margin-top: -10.0rem;
+    margin-bottom: 5.0rem;
+  }
+
+  #aboutName {
+    margin-left: 12%;
+
+  }
+
+  #pWelcome {
+    margin-left: 12%;
+
+  }
+
+  .pAbout {
+    display: flex;
+    float: left;
+    width: 40%;
+    margin-left: 12%;
+  }
+
+  .heroAbout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .h1Contact {
+    margin-left: 12%;
+  }
+
+  .pContact {
+    margin-left: 12%;
+  }
+
+  form {
+    margin-left: 12%;
+
+  }
+
+  form label>span {
+
+    width: 350px;
+  }
+
+  #h2About {
+    font-size: 32px;
+  }
+
+  .contactPage {
+    display: flex;
+    width: 100%;
+  }
+
+  .formContact {
+    display: flex;
+    float: left;
+    width: 30%;
+    margin-top: 2%;
+
+  }
+
+  .textContact {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    float: right;
+    margin-left: 9%;
+    margin-top: 2%;
+
+
+  }
+
+  .textContactIcons {
+    display: flex;
+    font-size: 50px;
+    gap: 3.0rem;
+    justify-content: left;
+    margin-left: 3.5rem;
+  }
+
+  .card {
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+  }
+
+  .cardContainer {
+    padding: 2px 15px;
+    margin-bottom: 3.0rem;
+  }
+
+  .card img {
+    width: full;
+  }
+
+  .allCards {
+    display: flex;
+  }
+
+  .viewAll {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  #projectsButton {
+    display: flex;
+    font-size: 20px;
+    border: none;
+    color: #E85A50;
+    font-weight: 600;
+    margin-right: 12%;
+  }
+
+  #projectsButton:hover {
+    color: #85888C;
+    cursor: pointer;
+  }
+
+  #projectsAbout {
+    font-size: 20px;
+  }
+
+  .resumeH1 {
+    margin-top: 3%;
+  }
+
+
+
+
+  .resumeInfo {
+    width: 50%;
+  }
+
+  .projectsH1 {
+    color: #E85A50;
+    margin-left: 12%;
+    margin-top: 5%;
+  }
+
+
+
+
+
+  .projectCardsInfo {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    width: 70%;
+    margin-top: 2.0rem;
+  }
+
+
+  .projectCardsInfo:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+  .projectCardsInfo img {
+    width: 200px;
+  }
+
+  .projectCards {
+    padding: 2px 20px;
+    margin-bottom: 2.0rem;
+  }
+
+  .skills {
+    margin-left: 12%;
+  }
+
+  .tabs {
+    width: 50%;
+    margin-left: 12%;
+  }
+
+  .w3-border {
+    width: 50%;
+    height: 30%;
+  }
+
+  .skillsList2 {
+
+    margin-left: 10%;
+  }
+
+  .skillsList3 {
+
+    margin-left: 10%;
+  }
+
+  .tabsContainer {
+    display: flex;
+  }
+
+  #javaProjectH1 {
+    margin-top: 3%;
+  }
+
+  .javaProjectInfo {
+    margin-left: 12%;
+    width: 70%;
+
+  }
+
+  .javaProjectInfo img {
+    width: 400px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+
+  }
+
+  #javaCoverPicture {
+    display: inline;
+    margin-left: 12%;
+    width: 1230px;
+    height: 500px;
+  }
+
+  #mobileCoverPicture {
+    display: inline;
+    margin-left: 12%;
+    width: 1230px;
+    height: 500px;
+  }
+
+  #redesignCoverPicture {
+    display: inline;
+    margin-left: 12%;
+    width: 1230px;
+    height: 500px;
+  }
+
+  #mobileProjectH1 {
+    margin-top: 3%;
+  }
+
+  .letsTalkImages {
+    width: 700px;
+    height: 300px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .letsTalkProblem {
+    width: 600px;
+    height: 350px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .letsTalkPersona {
+    width: 600px;
+    height: 250px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .letsTalkDiagram {
+    width: 600px;
+    height: 400px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .letsTalkApplication {
+    width: 750px;
+    height: 400px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .redesignProjectH1 {
+
+    margin-top: 5%;
+  }
+
+  .redesignSection {
+    width: 70%;
+  }
+
+  .wireframe {
+    width: 500px;
+    height: 700px;
+  }
+
+  .contact {
+    width: 650px;
+    height: 400px;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    padding-right: 20%;
+  }
+
+  .mobileProjectInfo {
+    width: 70%;
+  }
+
+  .projectAllCards {
+    margin-left: 2.5%;
+
+  }
+
+  .formContact {
+    width: 50%;
+
+  }
+
+}
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1800px) {
+
+  /*MAIN HOME CONTENT */
+  #homeKelsey {
+    right: 14.0rem;
+    height: 850px;
+    width: 600px;
+  }
+
+  #homeName {
+    font-size: 80px;
+
+  }
+
+  #homeTitle {
+    font-size: 35px;
+  }
+
+  #buttonHome {
+    font-size: 30px;
+
+  }
+
+  #homeLogo {
+    position: absolute;
+    top: 2.0rem;
+    left: 15.0rem;
+  }
+
+}
